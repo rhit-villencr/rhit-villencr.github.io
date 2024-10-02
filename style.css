@@ -1,4 +1,40 @@
-div{
-    font-size: large;
-    color: blue;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#imageInput {
+    margin-bottom: 20px;
+}
+
+#imageContainer {
+    margin-top: 20px;
+}
+
+#displayImage {
+    max-width: 100%;
+    height: auto;
+    display: none; /* Hidden until an image is loaded */
 }
