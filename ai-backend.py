@@ -1,15 +1,10 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
-@app.route('/process', methods=['GET'])
-def process_input():
-    # Get query parameters from the GET request
-    user_input = request.args.get('user_input', '')  # Default to empty string if no input provided
-    output = {"message": f"You entered: {user_input}"}
-    
-    # Return the result as a JSON response
-    return jsonify(output)
+@app.route('/', methods=['GET'])
+def homepage():
+    return render_template('index.html')
 
 if __name__ == '__main__':
     import os
