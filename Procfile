@@ -1,1 +1,1 @@
-web: python ai-backend.py
+web: python ai-frontend.py

@@ -12,3 +12,13 @@ document.getElementById("imageInput").addEventListener("change", function(event)
         alert("Please upload a valid image file.");
     }
 });
+
+const sess = new onnx.InferenceSession()
+async function test(){
+  console.time("loading model")
+  await sess.loadModel('/static/neural_net_model.onnx')
+  console.timeEnd("loading model")
+
+  console.log("model loaded");
+}
+document.querySelector('#load').addEventListener('click', test);
